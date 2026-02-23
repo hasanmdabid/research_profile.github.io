@@ -359,13 +359,6 @@ ul { list-style: none; }
   gap: 8px;
 }
 
-.hero-about {
-  margin-top: 28px;
-  padding-top: 24px;
-  border-top: 1px solid var(--border);
-}
-
-.hero-about h3,
 .hero-interests h3 {
   font-size: 1rem;
   font-weight: 700;
@@ -374,16 +367,6 @@ ul { list-style: none; }
   letter-spacing: 1px;
   margin-bottom: 12px;
 }
-
-.hero-about p {
-  color: var(--text-secondary);
-  font-size: 0.92rem;
-  line-height: 1.75;
-  margin-bottom: 12px;
-  text-align: justify;
-}
-
-.hero-about p:last-child { margin-bottom: 0; }
 
 .hero-interests {
   margin-top: 24px;
@@ -1176,7 +1159,6 @@ footer a { color: var(--primary); font-weight: 500; }
   .hero-photo img { width: 200px; height: 200px; }
   .hero-links { justify-content: center; }
   .hero-tags { justify-content: center; }
-  .hero-about p { text-align: left; }
   .hero-cv-btn { display: flex; justify-content: center; }
 
   .contact-grid { grid-template-columns: 1fr; }
