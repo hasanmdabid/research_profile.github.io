@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="ExRohr – AI-powered sewer pipeline inspection and fault detection. Research project by Md Abid Hasan." />
+  <title>ExRohr | Md Abid Hasan</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="../assets/css/project.css" />
+</head>
+<body>
+
+  <nav class="proj-nav">
+    <a href="../index.html#projects" class="proj-nav-back">
+      <i class="fas fa-arrow-left"></i> Back to Profile
+    </a>
+    <span class="proj-nav-title">ExRohr</span>
+    <button id="proj-theme-toggle" aria-label="Toggle dark mode">
+      <i class="fas fa-moon"></i>
+    </button>
+  </nav>
+
+  <div class="proj-hero">
+    <div class="proj-hero-inner">
+      <div class="proj-category">Industry Project &nbsp;·&nbsp; ExRohr GmbH</div>
+      <h1>ExRohr</h1>
+      <p class="proj-subtitle">AI-powered sewerage pipe inspection and fault detection using computer vision and machine learning</p>
+      <div class="proj-meta-row">
+        <div class="proj-meta-item">
+          <i class="fas fa-calendar-alt"></i>
+          <span><strong>Duration:</strong> Sept 2024 – Jan 2026</span>
+        </div>
+        <div class="proj-meta-item">
+          <i class="fas fa-coins"></i>
+          <span><strong>Funder:</strong> ExRohr GmbH, Lübeck, Germany</span>
+        </div>
+        <div class="proj-meta-item">
+          <i class="fas fa-user-tie"></i>
+          <span><strong>Role:</strong> Data Scientist</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <main class="proj-main">
+
+    <section class="proj-section">
+      <h2>Project Overview</h2>
+      <p>
+        The ExRohr project focuses on the development of an AI-powered system for the inspection and
+        fault detection of sewerage pipes. Utilizing advanced machine learning algorithms and computer
+        vision techniques, the project aims to automate the process of identifying defects and anomalies
+        in sewer infrastructure. This innovative approach not only enhances the accuracy and efficiency
+        of inspections but also reduces the need for manual labor, thereby minimizing costs and improving
+        safety.
+      </p>
+      <p>
+        The system is designed to analyze video footage captured by inspection cameras, detecting issues
+        such as cracks, blockages, and corrosion in real-time. By providing timely and precise information
+        about the condition of sewerage pipes, ExRohr contributes to better maintenance planning and
+        prolongs the lifespan of critical infrastructure in Schleswig-Holstein state, Germany.
+      </p>
+    </section>
+
+    <section class="proj-section">
+      <h2>Project Details</h2>
+      <div class="proj-details-grid">
+        <div class="proj-detail-item">
+          <div class="proj-detail-label"><i class="fas fa-calendar-alt"></i> Duration</div>
+          <div class="proj-detail-value">Sept 2024 – Jan 2026</div>
+        </div>
+        <div class="proj-detail-item">
+          <div class="proj-detail-label"><i class="fas fa-coins"></i> Funding</div>
+          <div class="proj-detail-value">ExRohr GmbH, Lübeck, Germany</div>
+        </div>
+        <div class="proj-detail-item">
+          <div class="proj-detail-label"><i class="fas fa-handshake"></i> Project Partners</div>
+          <div class="proj-detail-value">expandAI GmbH, Pallon GmbH</div>
+        </div>
+        <div class="proj-detail-item">
+          <div class="proj-detail-label"><i class="fas fa-globe"></i> Project Website</div>
+          <div class="proj-detail-value">Industrial project — not publicly listed</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="proj-section">
+      <h2>My Contributions</h2>
+      <p>
+        I am working as a Data Scientist in this project. My main contributions include developing and
+        implementing machine learning models for defect detection in sewerage pipes, optimizing algorithms
+        for real-time video analysis, and collaborating with cross-functional teams to integrate AI
+        solutions into the existing inspection workflow.
+      </p>
+      <p>
+        Additionally, I am involved in data preprocessing, model training, and performance evaluation
+        to ensure the accuracy and reliability of the detection system. This includes benchmarking
+        state-of-the-art computer vision architectures against domain-specific requirements for
+        infrastructure inspection.
+      </p>
+    </section>
+
+    <section class="proj-section">
+      <h2>Research Outcome</h2>
+      <p class="proj-no-pub">
+        This project is an industrial collaboration. As such, there are no public research publications
+        available at this time. Results are proprietary to the project partners.
+      </p>
+    </section>
+
+  </main>
+
+  <footer class="proj-footer">
+    <p>&copy; 2025 <a href="../index.html">Md Abid Hasan</a> &nbsp;·&nbsp; <a href="mailto:abid1084@gmail.com">abid1084@gmail.com</a></p>
+  </footer>
+
+  <script>
+    const btn = document.getElementById('proj-theme-toggle');
+    const saved = localStorage.getItem('theme');
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    if (saved === 'dark' || (!saved && prefersDark)) {
+      document.documentElement.setAttribute('data-theme', 'dark');
+      btn.innerHTML = '<i class="fas fa-sun"></i>';
+    }
+    btn.addEventListener('click', () => {
+      const isDark = document.documentElement.hasAttribute('data-theme');
+      if (isDark) {
+        document.documentElement.removeAttribute('data-theme');
+        btn.innerHTML = '<i class="fas fa-moon"></i>';
+        localStorage.setItem('theme', 'light');
+      } else {
+        document.documentElement.setAttribute('data-theme', 'dark');
+        btn.innerHTML = '<i class="fas fa-sun"></i>';
+        localStorage.setItem('theme', 'dark');
+      }
+    });
+  </script>
+</body>
+</html>

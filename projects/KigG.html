@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="KIgG – AI-supported in-vitro diagnostics for autoimmune diseases. Research project by Md Abid Hasan." />
+  <title>KIgG | Md Abid Hasan</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="../assets/css/project.css" />
+</head>
+<body>
+
+  <nav class="proj-nav">
+    <a href="../index.html#projects" class="proj-nav-back">
+      <i class="fas fa-arrow-left"></i> Back to Profile
+    </a>
+    <span class="proj-nav-title">KIgG</span>
+    <button id="proj-theme-toggle" aria-label="Toggle dark mode">
+      <i class="fas fa-moon"></i>
+    </button>
+  </nav>
+
+  <div class="proj-hero">
+    <div class="proj-hero-inner">
+      <div class="proj-category">Research Project &nbsp;·&nbsp; BMBF DATIpilot Funded</div>
+      <h1>KIgG</h1>
+      <p class="proj-subtitle">AI-supported in-vitro diagnostics for the differentiated detection and treatment of autoimmune diseases</p>
+      <div class="proj-meta-row">
+        <div class="proj-meta-item">
+          <i class="fas fa-calendar-alt"></i>
+          <span><strong>Duration:</strong> Sept 2024 – Jan 2026</span>
+        </div>
+        <div class="proj-meta-item">
+          <i class="fas fa-coins"></i>
+          <span><strong>Funder:</strong> Federal Ministry of Education and Research (BMBF)</span>
+        </div>
+        <div class="proj-meta-item">
+          <i class="fas fa-user-tie"></i>
+          <span><strong>Role:</strong> Data Scientist / AI Project Manager</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <main class="proj-main">
+
+    <section class="proj-section">
+      <h2>Project Overview</h2>
+      <p>
+        The KIgG project utilizes innovative testing methods that simulate immunological processes outside
+        the body to identify characteristic patterns. This approach enables differentiated diagnostics that
+        address the individual disease progression of patients. With KIgG, the project effectively bridges
+        the interface between basic research and clinical application, thus making a significant contribution
+        to the further development of precision medicine.
+      </p>
+      <p>
+        expandAI GmbH supports the project with its expertise in machine learning and AI-based
+        digitalization. Prof. Dr.-Ing. Marcin Grzegorzek, founder and shareholder of expandAI GmbH, and
+        Artur Piet, CEO of the company, contribute their technical and strategic experience to the
+        development of the diagnostic technology. The BMBF's DATIpilot funding guideline, with its
+        "Innovation Sprints" module, offers a flexible and rapid way to translate innovative ideas into
+        practice. Simplified application processes and short project durations of a maximum of 18 months
+        provide researchers with an experimental space to test forward-looking technologies. The KIgG
+        project exemplifies how targeted knowledge transfer can generate concrete societal benefits from
+        research results.
+      </p>
+    </section>
+
+    <section class="proj-section">
+      <h2>Project Details</h2>
+      <div class="proj-details-grid">
+        <div class="proj-detail-item">
+          <div class="proj-detail-label"><i class="fas fa-calendar-alt"></i> Duration</div>
+          <div class="proj-detail-value">Sept 2024 – Jan 2026</div>
+        </div>
+        <div class="proj-detail-item">
+          <div class="proj-detail-label"><i class="fas fa-coins"></i> Funding</div>
+          <div class="proj-detail-value">Federal Ministry of Education and Research (BMBF) – DATIpilot</div>
+        </div>
+        <div class="proj-detail-item">
+          <div class="proj-detail-label"><i class="fas fa-handshake"></i> Project Partners</div>
+          <div class="proj-detail-value">University Hospital Schleswig-Holstein (UKSH), expandAI GmbH</div>
+        </div>
+        <div class="proj-detail-item">
+          <div class="proj-detail-label"><i class="fas fa-globe"></i> Project Website</div>
+          <div class="proj-detail-value">
+            <a href="https://www.uni-luebeck.de/forschung/aktuelles-zur-forschung/aktuelles-zur-forschung/artikel/ki-gestuetzte-in-vitro-diagnostik-fuer-autoimmunerkrankungen.html" target="_blank" rel="noopener">
+              University of Lübeck – KIgG <i class="fas fa-external-link-alt" style="font-size:0.7rem"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="proj-section">
+      <h2>My Contributions</h2>
+      <p>
+        In this project, I am responsible for developing and implementing machine learning algorithms to
+        analyze complex immunological data. My work focuses on creating predictive models that can identify
+        disease patterns and support personalized treatment strategies for autoimmune diseases.
+      </p>
+      <p>
+        The role combines both technical AI development and project management, coordinating between the
+        clinical partners at UKSH and the AI engineering team at expandAI GmbH to ensure that the
+        diagnostic models meet both technical and clinical requirements.
+      </p>
+    </section>
+
+    <section class="proj-section">
+      <h2>Research Outcome</h2>
+      <p class="proj-no-pub">
+        The project is ongoing. Research publications and results will be disclosed upon project completion.
+      </p>
+    </section>
+
+  </main>
+
+  <footer class="proj-footer">
+    <p>&copy; 2025 <a href="../index.html">Md Abid Hasan</a> &nbsp;·&nbsp; <a href="mailto:abid1084@gmail.com">abid1084@gmail.com</a></p>
+  </footer>
+
+  <script>
+    const btn = document.getElementById('proj-theme-toggle');
+    const saved = localStorage.getItem('theme');
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    if (saved === 'dark' || (!saved && prefersDark)) {
+      document.documentElement.setAttribute('data-theme', 'dark');
+      btn.innerHTML = '<i class="fas fa-sun"></i>';
+    }
+    btn.addEventListener('click', () => {
+      const isDark = document.documentElement.hasAttribute('data-theme');
+      if (isDark) {
+        document.documentElement.removeAttribute('data-theme');
+        btn.innerHTML = '<i class="fas fa-moon"></i>';
+        localStorage.setItem('theme', 'light');
+      } else {
+        document.documentElement.setAttribute('data-theme', 'dark');
+        btn.innerHTML = '<i class="fas fa-sun"></i>';
+        localStorage.setItem('theme', 'dark');
+      }
+    });
+  </script>
+</body>
+</html>

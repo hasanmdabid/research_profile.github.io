@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="JDB – Half-hourly sales forecasting using deep learning for Junge Die Bäckerei. Project by Md Abid Hasan." />
+  <title>JDB Sales Forecasting | Md Abid Hasan</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="../assets/css/project.css" />
+</head>
+<body>
+
+  <nav class="proj-nav">
+    <a href="../index.html#projects" class="proj-nav-back">
+      <i class="fas fa-arrow-left"></i> Back to Profile
+    </a>
+    <span class="proj-nav-title">JDB Sales Forecasting</span>
+    <button id="proj-theme-toggle" aria-label="Toggle dark mode">
+      <i class="fas fa-moon"></i>
+    </button>
+  </nav>
+
+  <div class="proj-hero">
+    <div class="proj-hero-inner">
+      <div class="proj-category">Industry Project &nbsp;·&nbsp; Junge Die Bäckerei GmbH</div>
+      <h1>JDB – Half-Hourly Sales Forecasting</h1>
+      <p class="proj-subtitle">Deep learning-based time series forecasting for granular retail sales prediction across store locations</p>
+      <div class="proj-meta-row">
+        <div class="proj-meta-item">
+          <i class="fas fa-calendar-alt"></i>
+          <span><strong>Duration:</strong> Oct 2024 – Feb 2025</span>
+        </div>
+        <div class="proj-meta-item">
+          <i class="fas fa-coins"></i>
+          <span><strong>Funder:</strong> Junge Die Bäckerei GmbH</span>
+        </div>
+        <div class="proj-meta-item">
+          <i class="fas fa-user-tie"></i>
+          <span><strong>Role:</strong> AI Project Manager / Data Scientist</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <main class="proj-main">
+
+    <section class="proj-section">
+      <h2>Project Overview</h2>
+      <p>
+        This project developed a sales forecasting model to predict half-hourly sales turnover for various
+        products and store locations. It aimed to improve upon the limitations of the current Random Forest
+        (RF) model, which struggles with fine-grained predictions and sequential data. The project explores
+        and evaluates several advanced deep learning models, including DNNs, LSTMs, GRUs, Mamba, and
+        Hybrid models, which are better suited for handling complex time-series data.
+      </p>
+      <p>
+        The goal was to find a highly accurate model that could predict sales at a granular level, even
+        with irregular sales patterns and frequent zero-turnover periods. The models were evaluated using
+        a range of metrics (MAE, RMSE, WAPE) and different prediction approaches (direct, cumulative, and
+        daily turnover) to ensure a comprehensive assessment. By demonstrating that deep learning models
+        significantly outperform the existing RF method, this project provides a valuable solution for
+        retailers to reduce costs, optimize inventory, and enhance customer satisfaction.
+      </p>
+    </section>
+
+    <section class="proj-section">
+      <h2>Project Details</h2>
+      <div class="proj-details-grid">
+        <div class="proj-detail-item">
+          <div class="proj-detail-label"><i class="fas fa-calendar-alt"></i> Duration</div>
+          <div class="proj-detail-value">Oct 2024 – Feb 2025</div>
+        </div>
+        <div class="proj-detail-item">
+          <div class="proj-detail-label"><i class="fas fa-coins"></i> Funding</div>
+          <div class="proj-detail-value">Junge Die Bäckerei GmbH</div>
+        </div>
+        <div class="proj-detail-item">
+          <div class="proj-detail-label"><i class="fas fa-handshake"></i> Project Partners</div>
+          <div class="proj-detail-value">expandAI GmbH, Lübeck, Germany</div>
+        </div>
+        <div class="proj-detail-item">
+          <div class="proj-detail-label"><i class="fas fa-globe"></i> Project Website</div>
+          <div class="proj-detail-value">
+            <a href="https://github.com/expandAI-GmbH/BackereiFP-Frontend" target="_blank" rel="noopener">
+              GitHub Repository <i class="fas fa-external-link-alt" style="font-size:0.7rem"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="proj-section">
+      <h2>My Contributions</h2>
+      <p>
+        In this project, I played a key role in developing and implementing the sales forecasting model.
+        I performed data preprocessing, feature engineering, and model selection to ensure optimal
+        performance. I benchmarked state-of-the-art deep learning models, including <strong>DNNs, LSTMs,
+        and GRUs</strong>, to improve prediction accuracy and evaluated them against the baseline Random
+        Forest model.
+      </p>
+      <p>
+        I also explored transformer-based architectures such as Autoformer and iTransformer; however,
+        their performance for short-term, high-frequency prediction was not competitive in this specific
+        context due to the irregular nature of bakery sales data. The final solution delivered significant
+        improvements over the existing RF-based system in terms of prediction granularity and accuracy.
+      </p>
+    </section>
+
+    <section class="proj-section">
+      <h2>Research Outcome</h2>
+      <p class="proj-no-pub">
+        This is an industry collaboration project. The results and deliverables are proprietary to Junge
+        Die Bäckerei GmbH and expandAI GmbH. No public research publications are available.
+      </p>
+    </section>
+
+  </main>
+
+  <footer class="proj-footer">
+    <p>&copy; 2025 <a href="../index.html">Md Abid Hasan</a> &nbsp;·&nbsp; <a href="mailto:abid1084@gmail.com">abid1084@gmail.com</a></p>
+  </footer>
+
+  <script>
+    const btn = document.getElementById('proj-theme-toggle');
+    const saved = localStorage.getItem('theme');
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    if (saved === 'dark' || (!saved && prefersDark)) {
+      document.documentElement.setAttribute('data-theme', 'dark');
+      btn.innerHTML = '<i class="fas fa-sun"></i>';
+    }
+    btn.addEventListener('click', () => {
+      const isDark = document.documentElement.hasAttribute('data-theme');
+      if (isDark) {
+        document.documentElement.removeAttribute('data-theme');
+        btn.innerHTML = '<i class="fas fa-moon"></i>';
+        localStorage.setItem('theme', 'light');
+      } else {
+        document.documentElement.setAttribute('data-theme', 'dark');
+        btn.innerHTML = '<i class="fas fa-sun"></i>';
+        localStorage.setItem('theme', 'dark');
+      }
+    });
+  </script>
+</body>
+</html>

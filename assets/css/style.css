@@ -68,6 +68,19 @@ img { max-width: 100%; display: block; }
 ul { list-style: none; }
 
 /* ===================================
+   Text Justification
+   =================================== */
+.about-text p,
+.timeline-desc,
+.project-desc,
+.contact-info p,
+.award-year,
+.pub-authors,
+.interest-chip {
+  text-align: justify;
+}
+
+/* ===================================
    Utility Classes
    =================================== */
 .container {
@@ -978,6 +991,59 @@ footer p {
 }
 
 footer a { color: var(--primary); font-weight: 500; }
+
+/* ===================================
+   Certificate Button (in Awards)
+   =================================== */
+.cert-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 8px;
+  padding: 5px 14px;
+  background: rgba(21, 101, 192, 0.08);
+  color: var(--primary);
+  border: 1px solid rgba(21, 101, 192, 0.25);
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  transition: var(--transition);
+}
+
+.cert-btn:hover {
+  background: var(--primary);
+  color: #fff;
+  border-color: var(--primary);
+  text-decoration: none;
+}
+
+[data-theme="dark"] .cert-btn {
+  background: rgba(144, 202, 249, 0.08);
+  border-color: rgba(144, 202, 249, 0.25);
+}
+
+/* ===================================
+   Project "View Details" Link
+   =================================== */
+.project-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 14px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--primary);
+  transition: var(--transition);
+}
+
+.project-link i {
+  font-size: 0.75rem;
+  transition: transform 0.2s ease;
+}
+
+.project-link:hover i {
+  transform: translateX(4px);
+}
 
 /* ===================================
    Scroll to Top Button
