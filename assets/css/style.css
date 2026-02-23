@@ -388,6 +388,7 @@ ul { list-style: none; }
   margin-bottom: 16px;
   font-size: 1rem;
   line-height: 1.8;
+  text-align: justify;
 }
 
 .about-text p strong { color: var(--text); font-weight: 600; }
@@ -825,6 +826,32 @@ ul { list-style: none; }
 .award-year {
   font-size: 0.85rem;
   color: var(--text-muted);
+}
+
+.award-certs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.cert-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.8rem;
+  padding: 4px 10px;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+  color: var(--accent);
+  text-decoration: none;
+  transition: background 0.2s, border-color 0.2s;
+}
+
+.cert-link:hover {
+  background: var(--accent);
+  color: #fff;
+  border-color: var(--accent);
 }
 
 /* ===================================

@@ -90,22 +90,28 @@ scrollTopBtn.addEventListener('click', () => {
 const pubTabs = document.querySelectorAll('.pub-tab');
 const pubCards = document.querySelectorAll('.pub-card');
 
+function applyPubFilter(filter) {
+  pubCards.forEach(card => {
+    if (filter === 'all' || card.getAttribute('data-type') === filter) {
+      card.classList.remove('pub-hidden');
+    } else {
+      card.classList.add('pub-hidden');
+    }
+  });
+}
+
 pubTabs.forEach(tab => {
   tab.addEventListener('click', () => {
     const filter = tab.getAttribute('data-filter');
-
     pubTabs.forEach(t => t.classList.remove('active'));
     tab.classList.add('active');
-
-    pubCards.forEach(card => {
-      if (filter === 'all' || card.getAttribute('data-type') === filter) {
-        card.classList.remove('pub-hidden');
-      } else {
-        card.classList.add('pub-hidden');
-      }
-    });
+    applyPubFilter(filter);
   });
 });
+
+// Apply default filter on page load (first tab = Journal Articles)
+const defaultTab = document.querySelector('.pub-tab.active');
+if (defaultTab) applyPubFilter(defaultTab.getAttribute('data-filter'));
 
 /* ===================================
    Fade-In Animation on Scroll
