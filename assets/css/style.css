@@ -376,13 +376,6 @@ ul { list-style: none; }
 /* ===================================
    About Section
    =================================== */
-#about .about-grid {
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  gap: 48px;
-  align-items: start;
-}
-
 .about-text p {
   color: var(--text-secondary);
   margin-bottom: 16px;
@@ -1132,7 +1125,6 @@ footer a { color: var(--primary); font-weight: 500; }
   .hero-links { justify-content: center; }
   .hero-tags { justify-content: center; }
 
-  #about .about-grid { grid-template-columns: 1fr; }
   .contact-grid { grid-template-columns: 1fr; }
   .stats-row { grid-template-columns: repeat(3, 1fr); }
 }
