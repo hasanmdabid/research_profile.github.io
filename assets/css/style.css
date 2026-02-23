@@ -76,7 +76,8 @@ ul { list-style: none; }
 .contact-info p,
 .award-year,
 .pub-authors,
-.interest-chip {
+.interest-chip,
+.about-text p {
   text-align: justify;
 }
 
