@@ -245,7 +245,7 @@ ul { list-style: none; }
   display: flex;
   align-items: center;
   padding-top: var(--nav-height);
-  background: linear-gradient(135deg, #0d2818 0%, #1c1c2e 40%, #1a3a4a 70%, #0f2027 100%);
+  background: linear-gradient(135deg, #0d2818 0%, #1a3a4a 50%, #0f2027 100%);
   background-size: 300% 300%;
   animation: heroColorShift 14s ease infinite;
   position: relative;
