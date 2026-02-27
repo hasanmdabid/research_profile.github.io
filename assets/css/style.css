@@ -245,9 +245,9 @@ ul { list-style: none; }
   display: flex;
   align-items: center;
   padding-top: var(--nav-height);
-  background: linear-gradient(-45deg, #b8c6d8, #c1f0e0, #ddd6fe, #c7d2fe);
-  background-size: 400% 400%;
-  animation: heroColorShift 12s ease infinite;
+  background: linear-gradient(135deg, #0f2027 0%, #203a43 40%, #2c5364 70%, #1a3a4a 100%);
+  background-size: 300% 300%;
+  animation: heroColorShift 14s ease infinite;
   position: relative;
   overflow: hidden;
 }
@@ -260,7 +260,7 @@ ul { list-style: none; }
   width: 600px;
   height: 600px;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(21, 101, 192, 0.07) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.06) 0%, transparent 70%);
   pointer-events: none;
   animation: blobFloat1 14s ease-in-out infinite alternate;
 }
@@ -273,7 +273,7 @@ ul { list-style: none; }
   width: 500px;
   height: 500px;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(0, 131, 143, 0.07) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(100, 210, 255, 0.08) 0%, transparent 70%);
   pointer-events: none;
   animation: blobFloat2 10s ease-in-out infinite alternate;
 }
@@ -1213,6 +1213,60 @@ footer a { color: var(--primary); font-weight: 500; }
   50%  { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
 }
+
+/* ===================================
+   Hero Dark-Background Text Overrides
+   =================================== */
+#hero .hero-greeting { color: rgba(150, 230, 255, 0.95); }
+
+#hero .hero-content h1 {
+  background: linear-gradient(135deg, #e0f2fe 0%, #7dd3fc 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: #e0f2fe;
+}
+
+#hero .hero-content h2       { color: rgba(255, 255, 255, 0.88); }
+#hero .hero-content h2::after { background: rgba(150, 230, 255, 0.9); }
+#hero .hero-affiliation       { color: rgba(255, 255, 255, 0.75); }
+#hero .hero-affiliation i     { color: rgba(150, 230, 255, 0.9); }
+
+#hero .hero-link {
+  border-color: rgba(255, 255, 255, 0.28);
+  color: rgba(255, 255, 255, 0.85);
+  background: rgba(255, 255, 255, 0.08);
+  box-shadow: none;
+}
+#hero .hero-link:hover {
+  border-color: rgba(255, 255, 255, 0.65);
+  color: white;
+  background: rgba(255, 255, 255, 0.18);
+  transform: translateY(-2px);
+}
+
+#hero .badge {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: rgba(255, 255, 255, 0.28);
+  color: rgba(255, 255, 255, 0.9);
+}
+
+#hero .hero-cv-btn {
+  background: white;
+  color: #0f2027;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+#hero .hero-cv-btn:hover {
+  background: #e0f2fe;
+  color: #0f2027;
+  transform: translateY(-2px);
+}
+
+#hero .hero-right-title      { color: white; border-bottom-color: rgba(150, 230, 255, 0.5); }
+#hero .hero-right p           { color: rgba(255, 255, 255, 0.80); }
+#hero .hero-right p strong    { color: rgba(255, 255, 255, 0.98); }
+#hero .hero-right p em        { color: rgba(150, 230, 255, 0.95); }
+#hero .hero-photo img         { border-color: rgba(255, 255, 255, 0.22); }
 
 /* ===================================
    Scroll Progress Bar
