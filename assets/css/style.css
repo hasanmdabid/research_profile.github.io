@@ -54,10 +54,13 @@ html {
 
 body {
   font-family: var(--font);
-  background-color: var(--bg);
+  background: linear-gradient(-45deg, #dbe9f7, #e8f5ee, #f5e6f7, #e8eaf6);
+  background-size: 400% 400%;
+  background-attachment: fixed;
+  animation: bodyGradient 22s ease infinite;
   color: var(--text);
   line-height: 1.7;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  transition: color 0.3s ease;
   font-size: 16px;
 }
 
@@ -245,7 +248,9 @@ ul { list-style: none; }
   display: flex;
   align-items: center;
   padding-top: var(--nav-height);
-  background: linear-gradient(135deg, var(--bg) 0%, var(--bg-alt) 100%);
+  background: linear-gradient(135deg, #1a237e 0%, #0d47a1 30%, #00695c 65%, #004d40 100%);
+  background-size: 300% 300%;
+  animation: heroColorShift 14s ease infinite;
   position: relative;
   overflow: hidden;
 }
@@ -258,7 +263,7 @@ ul { list-style: none; }
   width: 600px;
   height: 600px;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(21, 101, 192, 0.08) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.08) 0%, transparent 70%);
   pointer-events: none;
   animation: blobFloat1 14s ease-in-out infinite alternate;
 }
@@ -271,7 +276,7 @@ ul { list-style: none; }
   width: 500px;
   height: 500px;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(0, 131, 143, 0.07) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(130, 220, 255, 0.09) 0%, transparent 70%);
   pointer-events: none;
   animation: blobFloat2 10s ease-in-out infinite alternate;
 }
@@ -1201,6 +1206,133 @@ footer a { color: var(--primary); font-weight: 500; }
 .fade-in.visible {
   opacity: 1;
   transform: translateY(0);
+}
+
+/* ===================================
+   Body & Hero Background Keyframes
+   =================================== */
+@keyframes bodyGradient {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes heroColorShift {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* ===================================
+   Dark Mode Body & Sections
+   =================================== */
+[data-theme="dark"] body {
+  background: linear-gradient(-45deg, #060c14, #0e0614, #060e0a, #0a0a1a);
+  background-size: 400% 400%;
+  background-attachment: fixed;
+  animation: bodyGradient 22s ease infinite;
+}
+
+[data-theme="dark"] #experience { background: linear-gradient(135deg, #0d1b2a 0%, #1a1f38 100%); }
+[data-theme="dark"] #education   { background: linear-gradient(135deg, #0a1a1f 0%, #0f1e1a 100%); }
+[data-theme="dark"] #publications{ background: linear-gradient(135deg, #160f1f 0%, #1f1a28 100%); }
+[data-theme="dark"] #projects    { background: linear-gradient(135deg, #1f1a10 0%, #1a1800 100%); }
+[data-theme="dark"] #awards      { background: linear-gradient(135deg, #1f1508 0%, #221e10 100%); }
+[data-theme="dark"] #contact     { background: linear-gradient(135deg, #0f1025 0%, #1a1a2e 100%); }
+
+/* ===================================
+   Section Background Gradients (light mode)
+   =================================== */
+#experience  { background: linear-gradient(135deg, #e8f0fe 0%, #f5f8ff 100%); }
+#education   { background: linear-gradient(135deg, #e0f7fa 0%, #f0fff8 100%); }
+#publications{ background: linear-gradient(135deg, #f3e5f5 0%, #fce4ec 100%); }
+#projects    { background: linear-gradient(135deg, #fff8e1 0%, #fdecea 100%); }
+#awards      { background: linear-gradient(135deg, #fff3e0 0%, #fffde7 100%); }
+#contact     { background: linear-gradient(135deg, #e8eaf6 0%, #e3f2fd 100%); }
+
+/* ===================================
+   Hero Dark-Background Text Overrides
+   =================================== */
+#hero .hero-greeting {
+  color: rgba(130, 220, 255, 0.95);
+}
+
+#hero .hero-content h1 {
+  background: linear-gradient(135deg, #90caf9 0%, #80deea 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: #90caf9;
+}
+
+#hero .hero-content h2 {
+  color: rgba(255, 255, 255, 0.88);
+}
+
+#hero .hero-content h2::after {
+  background: rgba(130, 220, 255, 0.9);
+}
+
+#hero .hero-affiliation {
+  color: rgba(255, 255, 255, 0.76);
+}
+
+#hero .hero-affiliation i {
+  color: rgba(130, 220, 255, 0.9);
+}
+
+#hero .hero-link {
+  border-color: rgba(255, 255, 255, 0.3);
+  color: rgba(255, 255, 255, 0.85);
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: none;
+}
+
+#hero .hero-link:hover {
+  border-color: rgba(255, 255, 255, 0.7);
+  color: white;
+  background: rgba(255, 255, 255, 0.22);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+  transform: translateY(-2px);
+}
+
+#hero .badge {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.3);
+  color: rgba(255, 255, 255, 0.9);
+}
+
+#hero .hero-cv-btn {
+  background: white;
+  color: #0d47a1;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+}
+
+#hero .hero-cv-btn:hover {
+  background: #e3f2fd;
+  color: #0d47a1;
+  transform: translateY(-2px);
+}
+
+#hero .hero-right-title {
+  color: white;
+  border-bottom-color: rgba(130, 220, 255, 0.5);
+}
+
+#hero .hero-right p {
+  color: rgba(255, 255, 255, 0.82);
+}
+
+#hero .hero-right p strong {
+  color: rgba(255, 255, 255, 0.98);
+}
+
+#hero .hero-right p em {
+  color: rgba(130, 220, 255, 0.95);
+}
+
+#hero .hero-photo img {
+  border-color: rgba(255, 255, 255, 0.25);
 }
 
 /* ===================================
